@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WanderNature | Travel & Nature</title>
+
+    <title>Wildora | Exotic Nature Travel</title>
 
     <style>
         * {
@@ -17,254 +18,303 @@
         }
 
         body {
-            font-family: Arial, sans-serif;
-            color: #26352b;
-            background: #f5f8f3;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #20352b;
+            background: #f5f7f2;
+            line-height: 1.6;
         }
 
+        /* NAVBAR */
+
         header {
-            position: sticky;
+            position: absolute;
             top: 0;
-            z-index: 1000;
-            background: #214d36;
-            color: white;
-            padding: 18px 60px;
+            left: 0;
+            width: 100%;
+            z-index: 10;
+            padding: 25px 7%;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            color: white;
         }
 
         .logo {
-            font-size: 27px;
+            font-size: 28px;
             font-weight: bold;
+            letter-spacing: 1px;
         }
 
         nav a {
             color: white;
             text-decoration: none;
-            margin-left: 25px;
-            font-size: 16px;
+            margin-left: 30px;
+            font-weight: bold;
         }
 
         nav a:hover {
-            color: #c9e8b5;
+            color: #d9efb7;
         }
 
+        /* HERO */
+
         .hero {
-            min-height: 650px;
+            min-height: 100vh;
             display: flex;
-            justify-content: center;
             align-items: center;
+            justify-content: center;
             text-align: center;
-            padding: 80px 20px;
             color: white;
+            padding: 100px 20px;
 
             background:
                 linear-gradient(
-                    rgba(20, 55, 35, 0.55),
-                    rgba(20, 55, 35, 0.55)
+                    rgba(8, 35, 25, 0.45),
+                    rgba(8, 35, 25, 0.55)
                 ),
-                url("https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1600&q=80")
-                center/cover;
+                url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=2400&q=90")
+                center center / cover no-repeat;
         }
 
         .hero-content {
-            max-width: 850px;
+            max-width: 900px;
         }
 
         .hero h1 {
-            font-size: 60px;
-            margin-bottom: 20px;
+            font-size: clamp(45px, 7vw, 85px);
+            line-height: 1.05;
+            margin-bottom: 25px;
+            text-shadow: 0 3px 15px rgba(0,0,0,0.4);
         }
 
         .hero p {
             font-size: 22px;
-            line-height: 1.7;
-            margin-bottom: 30px;
+            max-width: 700px;
+            margin: 0 auto 35px;
         }
 
         .btn {
             display: inline-block;
-            padding: 14px 30px;
-            margin: 5px;
-            background: #77a95b;
-            color: white;
+            padding: 15px 32px;
+            border-radius: 40px;
             text-decoration: none;
-            border-radius: 30px;
+            background: #8ebf61;
+            color: white;
             font-weight: bold;
+            margin: 5px;
         }
 
         .btn:hover {
-            background: #5d8d45;
+            background: #6f9e48;
         }
 
-        .btn-light {
-            background: white;
-            color: #214d36;
+        .btn-outline {
+            background: transparent;
+            border: 2px solid white;
         }
+
+        /* COMMON */
 
         section {
-            padding: 70px 30px;
+            padding: 90px 7%;
         }
 
-        .section-title {
+        .section-heading {
             text-align: center;
-            color: #214d36;
-            font-size: 36px;
-            margin-bottom: 15px;
+            margin-bottom: 50px;
         }
 
-        .section-subtitle {
-            text-align: center;
-            color: #647267;
-            font-size: 18px;
-            margin-bottom: 45px;
-        }
-
-        .destinations {
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-            flex-wrap: wrap;
-        }
-
-        .card {
-            width: 280px;
-            background: white;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 5px 18px rgba(0, 0, 0, 0.12);
-            text-align: center;
-        }
-
-        .card-image {
-            height: 180px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 70px;
-        }
-
-        .mountain {
-            background: #dcebd5;
-        }
-
-        .beach {
-            background: #d7edf0;
-        }
-
-        .forest {
-            background: #d7e8d4;
-        }
-
-        .waterfall {
-            background: #dcecf2;
-        }
-
-        .card-content {
-            padding: 25px 20px;
-        }
-
-        .card h3 {
-            color: #214d36;
-            margin-bottom: 12px;
-            font-size: 22px;
-        }
-
-        .card p {
-            color: #68736b;
-            line-height: 1.6;
-        }
-
-        .about {
-            background: #e5efdf;
-            text-align: center;
-        }
-
-        .about-content {
-            max-width: 850px;
-            margin: auto;
-            font-size: 19px;
-            line-height: 1.8;
-            color: #46554b;
-        }
-
-        .features {
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-            flex-wrap: wrap;
-        }
-
-        .feature {
-            width: 250px;
-            text-align: center;
-            padding: 25px;
-        }
-
-        .feature-icon {
-            font-size: 45px;
-            margin-bottom: 15px;
-        }
-
-        .feature h3 {
-            color: #214d36;
+        .section-heading h2 {
+            font-size: 42px;
+            color: #234936;
             margin-bottom: 10px;
         }
 
-        .feature p {
-            color: #68736b;
-            line-height: 1.6;
-        }
-
-        .contact {
-            text-align: center;
-            background: #f0f5ed;
-        }
-
-        .contact-box {
-            max-width: 700px;
-            margin: auto;
-            background: white;
-            padding: 35px;
-            border-radius: 15px;
-            box-shadow: 0 5px 18px rgba(0, 0, 0, 0.1);
-        }
-
-        .contact-box p {
-            margin: 12px;
+        .section-heading p {
+            color: #68776e;
             font-size: 18px;
         }
 
-        footer {
-            background: #214d36;
+        /* DESTINATIONS */
+
+        .destinations {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .destination {
+            background: white;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.10);
+            transition: transform 0.3s;
+        }
+
+        .destination:hover {
+            transform: translateY(-8px);
+        }
+
+        .destination img {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+        }
+
+        .destination-content {
+            padding: 25px;
+        }
+
+        .destination h3 {
+            color: #234936;
+            font-size: 23px;
+            margin-bottom: 10px;
+        }
+
+        .destination p {
+            color: #68776e;
+        }
+
+        /* ABOUT */
+
+        .about {
+            background: #e7efe1;
+        }
+
+        .about-container {
+            max-width: 1000px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .about-container p {
+            font-size: 20px;
+            color: #45594c;
+        }
+
+        /* EXPERIENCES */
+
+        .experiences {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .experience {
+            background: white;
+            padding: 35px 20px;
+            text-align: center;
+            border-radius: 16px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        .experience-icon {
+            font-size: 50px;
+            margin-bottom: 15px;
+        }
+
+        .experience h3 {
+            color: #234936;
+            margin-bottom: 10px;
+        }
+
+        .experience p {
+            color: #68776e;
+        }
+
+        /* CTA */
+
+        .cta {
             color: white;
             text-align: center;
-            padding: 30px;
+
+            background:
+                linear-gradient(
+                    rgba(20,60,40,0.7),
+                    rgba(20,60,40,0.7)
+                ),
+                url("https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=2200&q=90")
+                center / cover;
+        }
+
+        .cta h2 {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+
+        .cta p {
+            font-size: 20px;
+            margin-bottom: 25px;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #18372a;
+            color: white;
+            text-align: center;
+            padding: 35px 20px;
+        }
+
+        footer h3 {
+            font-size: 25px;
+            margin-bottom: 10px;
         }
 
         footer p {
-            margin: 8px;
+            color: #cbd8ce;
         }
 
-        @media (max-width: 700px) {
+        /* MOBILE */
+
+        @media (max-width: 900px) {
+
+            .destinations {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .experiences {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+
             header {
-                padding: 18px 20px;
+                position: absolute;
                 flex-direction: column;
                 gap: 15px;
+                padding: 20px;
             }
 
             nav a {
-                margin: 8px;
+                margin: 0 7px;
                 font-size: 14px;
             }
 
             .hero h1 {
-                font-size: 40px;
+                font-size: 45px;
             }
 
             .hero p {
                 font-size: 18px;
+            }
+
+            .destinations,
+            .experiences {
+                grid-template-columns: 1fr;
+            }
+
+            .section-heading h2 {
+                font-size: 34px;
+            }
+
+            .cta h2 {
+                font-size: 35px;
             }
         }
     </style>
@@ -272,189 +322,266 @@
 
 <body>
 
-    <header>
-        <div class="logo">🌿 WanderNature</div>
+<!-- NAVIGATION -->
 
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#destinations">Destinations</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
+<header>
 
-    <section class="hero" id="home">
-        <div class="hero-content">
-            <h1>Explore. Travel. Breathe. 🌄</h1>
+    <div class="logo">
+        🌿 WILDORA
+    </div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#destinations">Destinations</a>
+        <a href="#experiences">Experiences</a>
+        <a href="#about">About</a>
+    </nav>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <h1>
+            Discover The Wild
+        </h1>
+
+        <p>
+            Escape into extraordinary landscapes, untouched forests,
+            crystal-clear waters and breathtaking destinations around the world.
+        </p>
+
+        <a href="#destinations" class="btn">
+            Explore Destinations
+        </a>
+
+        <a href="#experiences" class="btn btn-outline">
+            View Experiences
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- DESTINATIONS -->
+
+<section id="destinations">
+
+    <div class="section-heading">
+
+        <h2>Exotic Destinations</h2>
+
+        <p>
+            Places where nature creates unforgettable memories.
+        </p>
+
+    </div>
+
+
+    <div class="destinations">
+
+        <div class="destination">
+
+            <img
+                src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1400&q=90"
+                alt="Beautiful mountain landscape"
+            >
+
+            <div class="destination-content">
+
+                <h3>🏔️ Mountain Paradise</h3>
+
+                <p>
+                    Explore dramatic mountains, peaceful valleys
+                    and breathtaking alpine landscapes.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="destination">
+
+            <img
+                src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1400&q=90"
+                alt="Exotic tropical beach"
+            >
+
+            <div class="destination-content">
+
+                <h3>🏝️ Tropical Escape</h3>
+
+                <p>
+                    Discover turquoise waters, white sand beaches
+                    and unforgettable island sunsets.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="destination">
+
+            <img
+                src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1400&q=90"
+                alt="Deep green forest"
+            >
+
+            <div class="destination-content">
+
+                <h3>🌲 Hidden Forests</h3>
+
+                <p>
+                    Wander through ancient forests and discover
+                    the peaceful side of the wild.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+
+    <div class="about-container">
+
+        <div class="section-heading">
+
+            <h2>Travel Beyond Ordinary</h2>
+
+        </div>
+
+        <p>
+            Wildora is for travelers who want more than ordinary vacations.
+            We believe the most beautiful journeys happen when you disconnect
+            from everyday life and reconnect with nature.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- EXPERIENCES -->
+
+<section id="experiences">
+
+    <div class="section-heading">
+
+        <h2>Wild Experiences</h2>
+
+        <p>
+            Adventure, discovery and unforgettable moments.
+        </p>
+
+    </div>
+
+
+    <div class="experiences">
+
+        <div class="experience">
+
+            <div class="experience-icon">🥾</div>
+
+            <h3>Jungle Trekking</h3>
 
             <p>
-                Discover breathtaking mountains, peaceful forests,
-                beautiful beaches and unforgettable adventures close to nature.
+                Explore hidden trails surrounded by untouched wilderness.
             </p>
 
-            <a href="#destinations" class="btn">Explore Destinations</a>
-            <a href="#contact" class="btn btn-light">Plan Your Trip</a>
         </div>
-    </section>
 
-    <section id="destinations">
 
-        <h2 class="section-title">Discover Nature</h2>
+        <div class="experience">
 
-        <p class="section-subtitle">
-            Find your perfect escape into the beauty of the natural world.
-        </p>
+            <div class="experience-icon">🏕️</div>
 
-        <div class="destinations">
+            <h3>Luxury Camping</h3>
 
-            <div class="card">
-                <div class="card-image mountain">🏔️</div>
-
-                <div class="card-content">
-                    <h3>Mountain Escapes</h3>
-                    <p>
-                        Experience peaceful valleys, majestic peaks and
-                        unforgettable mountain adventures.
-                    </p>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-image beach">🏝️</div>
-
-                <div class="card-content">
-                    <h3>Beach Getaways</h3>
-                    <p>
-                        Relax beside crystal-clear waters and enjoy
-                        beautiful sunsets by the sea.
-                    </p>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-image forest">🌲</div>
-
-                <div class="card-content">
-                    <h3>Forest Adventures</h3>
-                    <p>
-                        Walk through green forests, discover wildlife
-                        and reconnect with nature.
-                    </p>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-image waterfall">💦</div>
-
-                <div class="card-content">
-                    <h3>Waterfall Trails</h3>
-                    <p>
-                        Discover hidden waterfalls and refreshing
-                        natural landscapes.
-                    </p>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <section class="about" id="about">
-
-        <h2 class="section-title">Travel With Nature</h2>
-
-        <div class="about-content">
             <p>
-                WanderNature is created for travelers who love exploring
-                beautiful places while staying connected with nature.
-                From peaceful weekend trips to exciting adventures,
-                discover destinations that refresh your mind and soul.
+                Sleep under the stars while surrounded by spectacular scenery.
             </p>
-        </div>
-
-    </section>
-
-    <section>
-
-        <h2 class="section-title">Why Travel With Us?</h2>
-
-        <p class="section-subtitle">
-            Travel better. Explore responsibly. Create memories.
-        </p>
-
-        <div class="features">
-
-            <div class="feature">
-                <div class="feature-icon">🌍</div>
-                <h3>Beautiful Places</h3>
-                <p>
-                    Discover breathtaking destinations and hidden gems.
-                </p>
-            </div>
-
-            <div class="feature">
-                <div class="feature-icon">🥾</div>
-                <h3>Adventure</h3>
-                <p>
-                    Enjoy trekking, hiking and exciting outdoor experiences.
-                </p>
-            </div>
-
-            <div class="feature">
-                <div class="feature-icon">🌱</div>
-                <h3>Eco Friendly</h3>
-                <p>
-                    Travel responsibly and help protect the places we love.
-                </p>
-            </div>
-
-            <div class="feature">
-                <div class="feature-icon">📸</div>
-                <h3>Beautiful Memories</h3>
-                <p>
-                    Capture unforgettable moments from every journey.
-                </p>
-            </div>
 
         </div>
 
-    </section>
 
-    <section class="contact" id="contact">
+        <div class="experience">
 
-        <h2 class="section-title">Plan Your Adventure</h2>
+            <div class="experience-icon">🤿</div>
 
-        <p class="section-subtitle">
-            Your next beautiful journey starts here.
-        </p>
+            <h3>Ocean Adventure</h3>
 
-        <div class="contact-box">
-
-            <p>📍 <strong>Location:</strong> Pune, Maharashtra</p>
-
-            <p>📞 <strong>Phone:</strong> +91 98765 43210</p>
-
-            <p>📧 <strong>Email:</strong> hello@wandernature.com</p>
-
-            <br>
-
-            <a href="tel:+919876543210" class="btn">
-                Contact Us
-            </a>
+            <p>
+                Dive into crystal-clear waters and discover marine life.
+            </p>
 
         </div>
 
-    </section>
 
-    <footer>
+        <div class="experience">
 
-        <p>🌿 <strong>WanderNature</strong></p>
+            <div class="experience-icon">📸</div>
 
-        <p>Travel • Explore • Respect Nature</p>
+            <h3>Nature Photography</h3>
 
-        <p>© 2026 WanderNature. All Rights Reserved.</p>
+            <p>
+                Capture extraordinary landscapes and unforgettable moments.
+            </p>
 
-    </footer>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="cta">
+
+    <h2>
+        Your Wildest Journey Awaits
+    </h2>
+
+    <p>
+        Leave the ordinary behind. Follow the horizon.
+    </p>
+
+    <a href="mailto:hello@wildora.com" class="btn">
+        Start Your Adventure
+    </a>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <h3>🌿 WILDORA</h3>
+
+    <p>
+        Exotic Nature Travel • Explore More • Leave Less Behind
+    </p>
+
+    <p>
+        © 2026 Wildora Travel. All Rights Reserved.
+    </p>
+
+</footer>
 
 </body>
 </html>
-
