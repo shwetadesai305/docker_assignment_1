@@ -1,10 +1,9 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Croissant Bakery | Freshly Baked Happiness</title>
+    <title>WanderNature | Travel & Nature</title>
 
     <style>
         * {
@@ -19,25 +18,24 @@
 
         body {
             font-family: Arial, sans-serif;
-            background: #fffaf2;
-            color: #3e2723;
+            color: #26352b;
+            background: #f5f8f3;
         }
 
-        /* Header */
         header {
-            background: #5d4037;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: #214d36;
             color: white;
             padding: 18px 60px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
         }
 
         .logo {
-            font-size: 28px;
+            font-size: 27px;
             font-weight: bold;
         }
 
@@ -49,29 +47,29 @@
         }
 
         nav a:hover {
-            color: #ffd180;
+            color: #c9e8b5;
         }
 
-        /* Hero */
         .hero {
-            min-height: 600px;
+            min-height: 650px;
             display: flex;
             justify-content: center;
             align-items: center;
             text-align: center;
             padding: 80px 20px;
+            color: white;
+
             background:
                 linear-gradient(
-                    rgba(62, 39, 35, 0.55),
-                    rgba(62, 39, 35, 0.55)
+                    rgba(20, 55, 35, 0.55),
+                    rgba(20, 55, 35, 0.55)
                 ),
-                url("https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=1600&q=80")
+                url("https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1600&q=80")
                 center/cover;
-            color: white;
         }
 
         .hero-content {
-            max-width: 800px;
+            max-width: 850px;
         }
 
         .hero h1 {
@@ -81,109 +79,116 @@
 
         .hero p {
             font-size: 22px;
-            line-height: 1.6;
+            line-height: 1.7;
             margin-bottom: 30px;
         }
 
         .btn {
             display: inline-block;
             padding: 14px 30px;
-            background: #d2691e;
+            margin: 5px;
+            background: #77a95b;
             color: white;
             text-decoration: none;
             border-radius: 30px;
             font-weight: bold;
-            margin: 5px;
         }
 
         .btn:hover {
-            background: #a94e12;
+            background: #5d8d45;
         }
 
         .btn-light {
             background: white;
-            color: #5d4037;
+            color: #214d36;
         }
 
-        /* Sections */
         section {
             padding: 70px 30px;
         }
 
         .section-title {
             text-align: center;
+            color: #214d36;
             font-size: 36px;
-            color: #8d4b2d;
             margin-bottom: 15px;
         }
 
         .section-subtitle {
             text-align: center;
-            color: #795548;
+            color: #647267;
             font-size: 18px;
             margin-bottom: 45px;
         }
 
-        /* Products */
-        .products {
+        .destinations {
             display: flex;
             justify-content: center;
             gap: 25px;
             flex-wrap: wrap;
         }
 
-        .product-card {
+        .card {
+            width: 280px;
             background: white;
-            width: 270px;
-            padding: 30px 20px;
-            text-align: center;
             border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
+            overflow: hidden;
+            box-shadow: 0 5px 18px rgba(0, 0, 0, 0.12);
+            text-align: center;
         }
 
-        .product-card:hover {
-            transform: translateY(-8px);
+        .card-image {
+            height: 180px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 70px;
         }
 
-        .product-icon {
-            font-size: 65px;
-            margin-bottom: 15px;
+        .mountain {
+            background: #dcebd5;
         }
 
-        .product-card h3 {
-            color: #6d3b24;
-            font-size: 22px;
+        .beach {
+            background: #d7edf0;
+        }
+
+        .forest {
+            background: #d7e8d4;
+        }
+
+        .waterfall {
+            background: #dcecf2;
+        }
+
+        .card-content {
+            padding: 25px 20px;
+        }
+
+        .card h3 {
+            color: #214d36;
             margin-bottom: 12px;
+            font-size: 22px;
         }
 
-        .product-card p {
-            color: #795548;
+        .card p {
+            color: #68736b;
             line-height: 1.6;
         }
 
-        .price {
-            color: #d2691e;
-            font-weight: bold;
-            font-size: 20px;
-            margin: 18px 0;
-        }
-
-        /* About */
         .about {
-            background: #f5e6d3;
+            background: #e5efdf;
             text-align: center;
         }
 
         .about-content {
             max-width: 850px;
             margin: auto;
-            font-size: 18px;
+            font-size: 19px;
             line-height: 1.8;
-            color: #5d4037;
+            color: #46554b;
         }
 
-        /* Why Us */
         .features {
             display: flex;
             justify-content: center;
@@ -203,18 +208,18 @@
         }
 
         .feature h3 {
-            color: #8d4b2d;
+            color: #214d36;
             margin-bottom: 10px;
         }
 
         .feature p {
-            color: #795548;
-            line-height: 1.5;
+            color: #68736b;
+            line-height: 1.6;
         }
 
-        /* Contact */
         .contact {
             text-align: center;
+            background: #f0f5ed;
         }
 
         .contact-box {
@@ -223,7 +228,7 @@
             background: white;
             padding: 35px;
             border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 18px rgba(0, 0, 0, 0.1);
         }
 
         .contact-box p {
@@ -231,9 +236,8 @@
             font-size: 18px;
         }
 
-        /* Footer */
         footer {
-            background: #5d4037;
+            background: #214d36;
             color: white;
             text-align: center;
             padding: 30px;
@@ -243,9 +247,7 @@
             margin: 8px;
         }
 
-        /* Mobile */
         @media (max-width: 700px) {
-
             header {
                 padding: 18px 20px;
                 flex-direction: column;
@@ -270,238 +272,189 @@
 
 <body>
 
-    <!-- Header -->
     <header>
-        <div class="logo">🥐 Croissant Bakery</div>
+        <div class="logo">🌿 WanderNature</div>
 
         <nav>
             <a href="#home">Home</a>
-            <a href="#menu">Menu</a>
+            <a href="#destinations">Destinations</a>
             <a href="#about">About</a>
             <a href="#contact">Contact</a>
         </nav>
     </header>
 
-    <!-- Hero -->
     <section class="hero" id="home">
-
         <div class="hero-content">
-
-            <h1>Freshly Baked Happiness 🥐</h1>
+            <h1>Explore. Travel. Breathe. 🌄</h1>
 
             <p>
-                Golden, flaky and buttery croissants baked fresh every morning.
-                Come taste the perfect bite of happiness!
+                Discover breathtaking mountains, peaceful forests,
+                beautiful beaches and unforgettable adventures close to nature.
             </p>
 
-            <a href="#menu" class="btn">Explore Our Menu</a>
-
-            <a href="#contact" class="btn btn-light">Order Now</a>
-
+            <a href="#destinations" class="btn">Explore Destinations</a>
+            <a href="#contact" class="btn btn-light">Plan Your Trip</a>
         </div>
-
     </section>
 
-    <!-- Menu -->
-    <section id="menu">
+    <section id="destinations">
 
-        <h2 class="section-title">Our Bakery Favorites</h2>
+        <h2 class="section-title">Discover Nature</h2>
 
         <p class="section-subtitle">
-            Freshly baked with premium ingredients and lots of love.
+            Find your perfect escape into the beauty of the natural world.
         </p>
 
-        <div class="products">
+        <div class="destinations">
 
-            <div class="product-card">
+            <div class="card">
+                <div class="card-image mountain">🏔️</div>
 
-                <div class="product-icon">🥐</div>
-
-                <h3>Classic Croissant</h3>
-
-                <p>
-                    Light, buttery and perfectly flaky French-style croissant.
-                </p>
-
-                <div class="price">₹120</div>
-
-                <a href="#contact" class="btn">Order</a>
-
+                <div class="card-content">
+                    <h3>Mountain Escapes</h3>
+                    <p>
+                        Experience peaceful valleys, majestic peaks and
+                        unforgettable mountain adventures.
+                    </p>
+                </div>
             </div>
 
-            <div class="product-card">
+            <div class="card">
+                <div class="card-image beach">🏝️</div>
 
-                <div class="product-icon">🍫</div>
-
-                <h3>Chocolate Croissant</h3>
-
-                <p>
-                    Crispy golden layers filled with rich chocolate.
-                </p>
-
-                <div class="price">₹160</div>
-
-                <a href="#contact" class="btn">Order</a>
-
+                <div class="card-content">
+                    <h3>Beach Getaways</h3>
+                    <p>
+                        Relax beside crystal-clear waters and enjoy
+                        beautiful sunsets by the sea.
+                    </p>
+                </div>
             </div>
 
-            <div class="product-card">
+            <div class="card">
+                <div class="card-image forest">🌲</div>
 
-                <div class="product-icon">🧀</div>
-
-                <h3>Cheese Croissant</h3>
-
-                <p>
-                    Buttery croissant filled with delicious melted cheese.
-                </p>
-
-                <div class="price">₹180</div>
-
-                <a href="#contact" class="btn">Order</a>
-
+                <div class="card-content">
+                    <h3>Forest Adventures</h3>
+                    <p>
+                        Walk through green forests, discover wildlife
+                        and reconnect with nature.
+                    </p>
+                </div>
             </div>
 
-            <div class="product-card">
+            <div class="card">
+                <div class="card-image waterfall">💦</div>
 
-                <div class="product-icon">🍓</div>
-
-                <h3>Strawberry Croissant</h3>
-
-                <p>
-                    Flaky pastry filled with creamy filling and fresh strawberries.
-                </p>
-
-                <div class="price">₹200</div>
-
-                <a href="#contact" class="btn">Order</a>
-
+                <div class="card-content">
+                    <h3>Waterfall Trails</h3>
+                    <p>
+                        Discover hidden waterfalls and refreshing
+                        natural landscapes.
+                    </p>
+                </div>
             </div>
 
         </div>
-
     </section>
 
-    <!-- About -->
     <section class="about" id="about">
 
-        <h2 class="section-title">About Croissant Bakery</h2>
+        <h2 class="section-title">Travel With Nature</h2>
 
         <div class="about-content">
-
             <p>
-                At Croissant Bakery, we believe that every morning deserves
-                something delicious. Our bakers prepare fresh croissants,
-                pastries and breads every day using quality ingredients,
-                traditional techniques and a passion for baking.
+                WanderNature is created for travelers who love exploring
+                beautiful places while staying connected with nature.
+                From peaceful weekend trips to exciting adventures,
+                discover destinations that refresh your mind and soul.
             </p>
-
         </div>
 
     </section>
 
-    <!-- Features -->
     <section>
 
-        <h2 class="section-title">Why Choose Us?</h2>
+        <h2 class="section-title">Why Travel With Us?</h2>
 
         <p class="section-subtitle">
-            Freshness you can taste in every bite.
+            Travel better. Explore responsibly. Create memories.
         </p>
 
         <div class="features">
 
             <div class="feature">
-
-                <div class="feature-icon">🌾</div>
-
-                <h3>Quality Ingredients</h3>
-
+                <div class="feature-icon">🌍</div>
+                <h3>Beautiful Places</h3>
                 <p>
-                    We use carefully selected ingredients for exceptional taste.
+                    Discover breathtaking destinations and hidden gems.
                 </p>
-
             </div>
 
             <div class="feature">
-
-                <div class="feature-icon">🔥</div>
-
-                <h3>Freshly Baked</h3>
-
+                <div class="feature-icon">🥾</div>
+                <h3>Adventure</h3>
                 <p>
-                    Our bakery items are baked fresh every day.
+                    Enjoy trekking, hiking and exciting outdoor experiences.
                 </p>
-
             </div>
 
             <div class="feature">
-
-                <div class="feature-icon">❤️</div>
-
-                <h3>Made With Love</h3>
-
+                <div class="feature-icon">🌱</div>
+                <h3>Eco Friendly</h3>
                 <p>
-                    Every croissant is handcrafted with care and passion.
+                    Travel responsibly and help protect the places we love.
                 </p>
-
             </div>
 
             <div class="feature">
-
-                <div class="feature-icon">🚚</div>
-
-                <h3>Quick Delivery</h3>
-
+                <div class="feature-icon">📸</div>
+                <h3>Beautiful Memories</h3>
                 <p>
-                    Enjoy your favorite bakery treats delivered to your door.
+                    Capture unforgettable moments from every journey.
                 </p>
-
             </div>
 
         </div>
 
     </section>
 
-    <!-- Contact -->
     <section class="contact" id="contact">
 
-        <h2 class="section-title">Visit Our Bakery</h2>
+        <h2 class="section-title">Plan Your Adventure</h2>
 
         <p class="section-subtitle">
-            Come in for a warm croissant and a fresh cup of coffee.
+            Your next beautiful journey starts here.
         </p>
 
         <div class="contact-box">
 
-            <p>📍 <strong>Address:</strong> Pune, Maharashtra</p>
+            <p>📍 <strong>Location:</strong> Pune, Maharashtra</p>
 
             <p>📞 <strong>Phone:</strong> +91 98765 43210</p>
 
-            <p>📧 <strong>Email:</strong> hello@croissantbakery.com</p>
-
-            <p>🕘 <strong>Opening Hours:</strong> 7:00 AM – 9:00 PM</p>
+            <p>📧 <strong>Email:</strong> hello@wandernature.com</p>
 
             <br>
 
             <a href="tel:+919876543210" class="btn">
-                Call Us
+                Contact Us
             </a>
 
         </div>
 
     </section>
 
-    <!-- Footer -->
     <footer>
 
-        <p>🥐 <strong>Croissant Bakery</strong></p>
+        <p>🌿 <strong>WanderNature</strong></p>
 
-        <p>Freshly Baked • Freshly Loved</p>
+        <p>Travel • Explore • Respect Nature</p>
 
-        <p>© 2026 Croissant Bakery. All Rights Reserved.</p>
+        <p>© 2026 WanderNature. All Rights Reserved.</p>
 
     </footer>
 
 </body>
 </html>
-```
+
